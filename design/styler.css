@@ -1,0 +1,154 @@
+/* -----RESET----- */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* -----VARIABLES-----*/
+:root {
+  --header-height: 2.5rem;
+
+  --title-font: "Roboto", sans-serif;
+  --body-font: "Roboto", sans-serif;
+
+  --orange-color: #d2872c;
+  --grey-color: #766f68;
+  --white-color: #fff;
+}
+
+body {
+  font: 400 1rem var(--subtitle-font-size);
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  font: 700 var(--title-font) var(title-font-size);
+  color: var(--grey-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 5rem;
+  border-radius: 0.7rem;
+  font: 700 1rem var(--body-font);
+  font-size: 25px;
+  transition: background 0.3;
+}
+
+.button:hover {
+  background: #ff8c00;
+}
+
+/* ----- Layout ----- */
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.section {
+  padding: calc(0.5rem + var(--header-height));
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+#header {
+  border-bottom: 1px solid var(--white-color);
+  margin-bottom: 2rem;
+  display: flex;
+  margin-top: 2.5rem;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  font: 700 2.3rem var(--title-font);
+  color: var(--orange-color);
+  width: 100%;
+}
+
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav .menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav .menu ul li a.title {
+  font: 400 1.4rem var(--body-font);
+  color: var(--grey-color);
+  transition: 0.3s;
+  display: inline-block;
+}
+
+nav .menu ul li a.title:hover {
+  transform: translateY(-6px);
+}
+
+#home {
+  overflow: hidden;
+}
+
+#home .container {
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+#home .image {
+  order: 1;
+  left: 1rem;
+  width: 850px;
+}
+
+#home .text {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+  font: 700 5rem var(--body-font);
+  color: var(--grey-color);
+}
+
+#home .text p {
+  margin-bottom: 1rem;
+  font: 400 1.7rem var(--body-font);
+  color: var(--grey-color);
+}
